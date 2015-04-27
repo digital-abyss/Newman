@@ -71,7 +71,7 @@ var Newman = jsface.Class([Options, EventEmitter], {
                     log.note("\n\nEnvironment File Exported To: " + options.exportEnvironmentFile + "\n");
                 }
 
-                callback(); 
+                callback();
             });
         }
 
