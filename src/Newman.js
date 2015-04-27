@@ -59,7 +59,6 @@ var Newman = jsface.Class([Options, EventEmitter], {
 
         if (typeof callback === "function") {
             this.addEventListener('iterationRunnerOver', function() {
-                console.log("JIAG: in iterationRunnerOver event");
                 if (options.exportGlobalsFile) {
                     fs.writeFileSync(options.exportGlobalsFile, JSON.stringify(Globals.globalJson.values,null,1));
                     log.note("\n\nGlobals File Exported To: " + options.exportGlobalsFile + "\n");
