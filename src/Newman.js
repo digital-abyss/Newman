@@ -7,8 +7,7 @@ var jsface          = require("jsface"),
     Options          = require('./utilities/Options'),
     log              = require('./utilities/Logger'),
     fs               = require('fs'),
-    exec             = require('child_process').exec;
-    
+    exec             = require('child_process').exec; 
 /**
  * @name Newman
  * @classdesc Bootstrap Newman class, mixin from Options class
