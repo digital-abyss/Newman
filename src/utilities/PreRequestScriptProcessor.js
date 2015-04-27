@@ -68,6 +68,8 @@ var PreRequestScriptProcessor = jsface.Class({
 
         requestScript = sweet + 'String.prototype.has = function(value){ return this.indexOf(value) > -1};' + setEnvHack + requestScript;
 
+        debugger;
+        console.log("In _evaluateInSandboxedEnvironment");
         try {
             vm.runInNewContext(requestScript, sandbox);
         } catch (err) {

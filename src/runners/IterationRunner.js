@@ -21,6 +21,8 @@ var jsface           = require("jsface"),
  */
 var IterationRunner = jsface.Class([Options, EventEmitter], {
     constructor: function(requestJSON, options) {
+        debugger;
+        console.log("In IterationRunner:constructor");
         this.setOptions(options);
         this.collection = this._getOrderedCollection(requestJSON);
         this.collectionName = requestJSON.name;
@@ -114,6 +116,8 @@ var IterationRunner = jsface.Class([Options, EventEmitter], {
 
     // sets the global environment object property as the env vars + globals + dataFiles
     _setGlobalEnvJson: function() {
+        debugger;
+        console.log("In _setGlobalEnvJson");
         if(typeof Globals.envJson.values==="undefined") {
             Globals.envJson.values=[];
         }
