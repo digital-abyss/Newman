@@ -259,8 +259,6 @@ var TestResponseHandler = jsface.Class(AbstractResponseHandler, {
                     return null;
                 },
                 setGlobalVariableReal: function(key, value) {
-                    debugger;
-                    //console.log("Ini setGlobalVariableReal");
                     var envVar = _und.find(Globals.globalJson.values, function(envObject){
                         return envObject["key"] === key;
                     });
