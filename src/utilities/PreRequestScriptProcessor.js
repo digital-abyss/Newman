@@ -12,7 +12,11 @@ var jsface                  = require('jsface'),
     Globals                 = require("./Globals"),
     btoa                    = require("btoa"),
     atob                    = require("atob"),
-    tv4                     = require("tv4");
+    tv4                     = require("tv4"),
+    fs                      = require("fs"),
+    xmldom                  = require("xmldom"),
+    dsig                    = require("xml-dsig")();
+
 require('sugar');
 
 
@@ -139,7 +143,10 @@ var PreRequestScriptProcessor = jsface.Class({
             _: _lod,
             btoa: btoa,
             atob: atob,
+            fs: fs,
             CryptoJS: CryptoJS,
+            xmldom: xmldom,
+            dsig: dsig,
             Backbone: Backbone,
             xmlToJson: function(string) {
                 var JSON = {};

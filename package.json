@@ -46,7 +46,9 @@
     "btoa": "1.1.2",
     "cli-color": "0.2.x",
     "commander": "2.x.x",
+    "crypto-js": "*",
     "dot": "1.0.3",
+    "fs": "0.0.2",
     "jquery": "2.1.1",
     "jsdom": "3.x.x",
     "jsface": "2.2.x",
@@ -60,8 +62,9 @@
     "tv4": "^1.1.9",
     "underscore": "1.x.x",
     "unirest": "^0.4.0",
+    "xml-dsig": "0.0.6-1",
     "xml2js": "^0.4.5",
-    "crypto-js": "*"
+    "xmldom": "^0.1.19"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
