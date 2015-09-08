@@ -345,6 +345,10 @@ var ResponseExporter = jsface.Class({
 
 				xml += testcases;
 
+				if (totalFailuresForSuite > 0) {
+					xml += '\t\t<system-out>AC: Is this a better place to show the failed request/response? (1 JUnit test suite = 1 Newman request)</system-out>\n';
+				}
+
 				xml += "\t</testsuite>\n";
 			}, this);
 
