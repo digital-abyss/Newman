@@ -38,21 +38,7 @@ var AbstractResponseHandler = jsface.Class([EventEmitter], {
 	_printResponse: function(error, response, body, request) {
         if (Globals.outputFileVerbose) {
             var filepath = path.resolve(Globals.outputFileVerbose);
-
-            var requestString = "-------------------------------------------------------------------------------------------\n" +
-                    response.statusCode + " " +
-                    response.stats.timeTaken + "ms" + " " +
-                    request.name + " " +  "[" + request.method + "] " +
-                    request.transformed.url +
-                    "\n------------------------------------------------------------" +
-                    "\nRequest headers:\n" +
-                    JSON.stringify(response.req._headers, undefined, 1) +
-                    "\nRequest body:\n" +
-                    request.transformed.data +
-                    "\n------------------------------------------------------------" +
-                    "\nResponse headers:\n" +
-                    JSON.stringify(response.headers, undefined, 1) +
-                    "\nResponse body:\n" + response.body + "\n";
+            var requestString = ResponseExporter.formatRequestResponseLog(request, response);
 
             fs.appendFileSync(filepath , requestString);
         }
